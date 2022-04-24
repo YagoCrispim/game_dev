@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/terrain/Terrain (16x16).png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 64, 48, 48 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 24 )
+
+[node name="wood_box" type="Node2D"]
+
+[node name="wood_box" type="StaticBody2D" parent="."]
+scale = Vector2( 1.2, 1.2 )
+
+[node name="sprite" type="Sprite" parent="wood_box"]
+texture = SubResource( 1 )
+
+[node name="collision" type="CollisionShape2D" parent="wood_box"]
+shape = SubResource( 2 )

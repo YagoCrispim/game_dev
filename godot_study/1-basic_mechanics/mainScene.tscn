@@ -1,0 +1,297 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://prefabs/characters/main_player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/terrain/Terrain (16x16).png" type="Texture" id=2]
+[ext_resource path="res://prefabs/objects/wood_box.tscn" type="PackedScene" id=3]
+[ext_resource path="res://prefabs/platforms/wood_platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://prefabs/animated_objs/apple.tscn" type="PackedScene" id=5]
+[ext_resource path="res://prefabs/numbers/score.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sprites/environment/sky.jpg" type="Texture" id=7]
+[ext_resource path="res://prefabs/animated_objs/end_flag.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SegmentShape2D" id=40]
+a = Vector2( -104, -48 )
+b = Vector2( -104, 504 )
+
+[sub_resource type="SegmentShape2D" id=41]
+a = Vector2( 88, 760 )
+b = Vector2( 88, 208 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 519, 20 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 98, 1, 44, 45 )
+
+[node name="mainScene" type="Node2D"]
+
+[node name="borders" type="KinematicBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="left_line" type="CollisionShape2D" parent="borders"]
+position = Vector2( 104, 48 )
+shape = SubResource( 40 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="right_line" type="CollisionShape2D" parent="borders"]
+position = Vector2( 936, -208 )
+shape = SubResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="main_player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 200, 536 )
+
+[node name="environment" type="Node2D" parent="."]
+z_index = -1
+
+[node name="floor" type="StaticBody2D" parent="environment"]
+position = Vector2( -16, 4 )
+
+[node name="left_collision" type="CollisionShape2D" parent="environment/floor"]
+position = Vector2( 527, 572 )
+shape = SubResource( 15 )
+
+[node name="terrain_block" type="Node2D" parent="environment/floor"]
+position = Vector2( 1022, 574.5 )
+
+[node name="terrain" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -992, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain2" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -952, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain3" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -912, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain4" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -872, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain5" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -828, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain6" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -784, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain7" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -740, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain8" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -696, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain9" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -652, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain10" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -608, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain11" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -564, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain12" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -520, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain13" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -477, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain14" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -434, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain15" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -390, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain16" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -347, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain17" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -304, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain18" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -262, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain19" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -219, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain20" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -175, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain21" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -131, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain27" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -103, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain22" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -81, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain26" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -81, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain23" type="Sprite" parent="environment/floor/terrain_block"]
+position = Vector2( -40, 0 )
+texture = SubResource( 14 )
+
+[node name="terrain24" type="Sprite" parent="environment/floor/terrain_block"]
+texture = SubResource( 14 )
+
+[node name="terrain25" type="Sprite" parent="environment/floor/terrain_block"]
+texture = SubResource( 14 )
+
+[node name="scene_objs" type="Node2D" parent="environment"]
+
+[node name="Sprite" type="Sprite" parent="environment/scene_objs"]
+position = Vector2( 760, 512 )
+scale = Vector2( 3.76, 3.76 )
+
+[node name="flag" parent="environment/scene_objs" instance=ExtResource( 8 )]
+position = Vector2( 947, 493 )
+scale = Vector2( 3.76, 3.76 )
+
+[node name="box" type="Node2D" parent="environment/scene_objs"]
+position = Vector2( -32, 4 )
+
+[node name="wood_box" parent="environment/scene_objs/box" instance=ExtResource( 3 )]
+position = Vector2( 152, 523 )
+
+[node name="wood_box2" parent="environment/scene_objs/box" instance=ExtResource( 3 )]
+position = Vector2( 80, 523 )
+
+[node name="wood_box3" parent="environment/scene_objs/box" instance=ExtResource( 3 )]
+position = Vector2( 112, 466 )
+
+[node name="platforms" type="Node2D" parent="environment/scene_objs"]
+position = Vector2( 0, 8 )
+
+[node name="wood_platform" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 256, 360 )
+
+[node name="wood_platform2" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 304, 360 )
+
+[node name="wood_platform3" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 352, 360 )
+
+[node name="wood_platform4" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 400, 360 )
+
+[node name="wood_platform5" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 536, 336 )
+
+[node name="wood_platform6" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 584, 336 )
+
+[node name="wood_platform7" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 720, 336 )
+
+[node name="wood_platform8" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 864, 336 )
+
+[node name="wood_platform9" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 968, 264 )
+
+[node name="wood_platform10" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 807, 168 )
+
+[node name="wood_platform11" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 648, 176 )
+
+[node name="wood_platform12" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 496, 168 )
+
+[node name="wood_platform15" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 60, 96 )
+
+[node name="wood_platform14" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 192, 120 )
+
+[node name="wood_platform13" parent="environment/scene_objs/platforms" instance=ExtResource( 4 )]
+position = Vector2( 332, 144 )
+
+[node name="apple" type="Node2D" parent="environment/scene_objs"]
+
+[node name="apple2" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 256, 336 )
+
+[node name="apple3" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 304, 336 )
+
+[node name="apple4" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 352, 336 )
+
+[node name="apple5" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 400, 336 )
+
+[node name="apple6" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 536, 312 )
+
+[node name="apple7" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 584, 312 )
+
+[node name="apple8" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 648, 152 )
+
+[node name="apple9" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 496, 144 )
+
+[node name="apple10" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 807, 152 )
+
+[node name="apple11" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 965, 240 )
+
+[node name="apple12" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 332, 120 )
+
+[node name="apple13" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 192, 96 )
+
+[node name="apple14" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 60, 72 )
+
+[node name="apple15" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 720, 312 )
+
+[node name="apple16" parent="environment/scene_objs/apple" instance=ExtResource( 5 )]
+position = Vector2( 864, 312 )
+
+[node name="sky" type="Sprite" parent="environment"]
+position = Vector2( 536, 303 )
+scale = Vector2( 0.888009, 0.888009 )
+z_index = -1
+texture = ExtResource( 7 )
+
+[node name="Score" parent="environment/sky" instance=ExtResource( 6 )]
+position = Vector2( 504.499, -296.168 )
+
+[connection signal="body_entered" from="environment/scene_objs/flag" to="main_player" method="_on_flag_body_entered"]
+[connection signal="body_entered" from="environment/scene_objs/flag" to="environment/scene_objs/flag" method="_on_flag_body_entered"]

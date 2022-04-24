@@ -1,0 +1,8 @@
+Coroutine: Métodos que podem pausar a própria execução, devolver o controle para a Unity e continuar sua execução no próximo frame.
+
+Quaternion: Representa a rotação do objeto.
+  - identity: Representa a rotação zerada.
+
+Yield return: Possibilita retornar diversos itens e executar a próxima instrução após a execução do yield.
+
+Rigidbody.Drag: Algo como a força da gravidade naquele obj, ou a resistência do ar.
