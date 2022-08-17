@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://prefabs/characters/mother_ship/mother_ship.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/ufo_sheet.png" type="Texture" id=2]
+[ext_resource path="res://assets/sounds/events_sounds/mother_ship.wav" type="AudioStream" id=3]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "default"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.49946, 3.5 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9.13171, 26.5042 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "default"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 188.425, 26.5042 ), Vector2( -9.13171, 26.5042 ) ]
+}
+
+[node name="mother_ship" type="Area2D"]
+position = Vector2( -9.13171, 26.5042 )
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+hframes = 2
+frame = 1
+
+[node name="anim" type="AnimationPlayer" parent="sprite"]
+anims/RESET = SubResource( 2 )
+anims/default = SubResource( 3 )
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0.00835037, 0.5 )
+shape = SubResource( 1 )
+
+[node name="default" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 4 )
+anims/default = SubResource( 5 )
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true

@@ -1,0 +1,276 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/alien_group.gd" type="Script" id=1]
+[ext_resource path="res://assets/sounds/enemy_movement_sound/nota2.wav" type="AudioStream" id=2]
+[ext_resource path="res://prefabs/ui_resources/fonts/main_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/game/game.gd" type="Script" id=4]
+[ext_resource path="res://assets/sounds/events_sounds/mother_ship.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sprites/Ship-sheet.png" type="Texture" id=6]
+[ext_resource path="res://scripts/life_draw.gd" type="Script" id=7]
+[ext_resource path="res://assets/sounds/events_sounds/ship_explosion.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/events_sounds/alien_shot.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/sounds/enemy_movement_sound/nota4.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/sounds/enemy_movement_sound/nota1.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/sounds/events_sounds/alien_explosion.wav" type="AudioStream" id=12]
+[ext_resource path="res://prefabs/characters/enemies/enemy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/sounds/enemy_movement_sound/nota3.wav" type="AudioStream" id=14]
+[ext_resource path="res://prefabs/characters/player/player.tscn" type="PackedScene" id=15]
+[ext_resource path="res://prefabs/objects/shield/shield.tscn" type="PackedScene" id=16]
+[ext_resource path="res://assets/sounds/events_sounds/ship_shoot.wav" type="AudioStream" id=17]
+
+[node name="game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="alien_group" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="aliens" type="Node2D" parent="alien_group"]
+
+[node name="enemy" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 16, 60 )
+
+[node name="enemy3" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 32, 60 )
+
+[node name="enemy2" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 48, 60 )
+
+[node name="enemy4" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 64, 60 )
+
+[node name="enemy5" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 80, 60 )
+
+[node name="enemy6" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 96, 60 )
+
+[node name="enemy7" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 112, 60 )
+
+[node name="enemy8" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 128, 60 )
+
+[node name="enemy9" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 144, 60 )
+
+[node name="enemy10" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 160, 60 )
+
+[node name="enemy11" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 16, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy20" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 32, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy12" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 48, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy13" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 64, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy14" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 80, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy15" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 96, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy16" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 112, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy17" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 128, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy18" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 144, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy19" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 160, 72 )
+selected_enemy_idx = 1
+
+[node name="enemy21" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 16, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy30" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 32, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy22" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 48, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy23" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 64, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy24" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 80, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy25" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 96, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy26" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 112, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy27" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 128, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy28" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 144, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy29" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 160, 84 )
+selected_enemy_idx = 2
+
+[node name="enemy31" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 16, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy40" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 32, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy32" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 48, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy33" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 64, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy34" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 80, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy35" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 96, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy36" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 112, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy37" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 128, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy38" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 144, 96 )
+selected_enemy_idx = 2
+
+[node name="enemy39" parent="alien_group/aliens" instance=ExtResource( 13 )]
+position = Vector2( 160, 96 )
+selected_enemy_idx = 2
+
+[node name="timer_mother_ship" type="Timer" parent="alien_group"]
+
+[node name="timer_shot" type="Timer" parent="alien_group"]
+wait_time = 0.2
+
+[node name="timer_movement" type="Timer" parent="alien_group"]
+
+[node name="timer_render_alien_interval" type="Timer" parent="alien_group"]
+wait_time = 0.05
+one_shot = true
+
+[node name="enemy_sounds" type="Node" parent="alien_group"]
+
+[node name="movements" type="Node2D" parent="alien_group/enemy_sounds"]
+
+[node name="4" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/movements"]
+stream = ExtResource( 11 )
+
+[node name="3" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/movements"]
+stream = ExtResource( 2 )
+
+[node name="2" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/movements"]
+stream = ExtResource( 14 )
+
+[node name="1" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/movements"]
+stream = ExtResource( 10 )
+
+[node name="events" type="Node2D" parent="alien_group/enemy_sounds"]
+
+[node name="destroyed" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/events"]
+stream = ExtResource( 12 )
+
+[node name="shoot" type="AudioStreamPlayer" parent="alien_group/enemy_sounds/events"]
+stream = ExtResource( 9 )
+
+[node name="events_sounds" type="Node2D" parent="alien_group"]
+
+[node name="alien_explosion" type="AudioStreamPlayer" parent="alien_group/events_sounds"]
+stream = ExtResource( 12 )
+
+[node name="alien_shot" type="AudioStreamPlayer" parent="alien_group/events_sounds"]
+stream = ExtResource( 9 )
+
+[node name="mother_ship" type="AudioStreamPlayer" parent="alien_group/events_sounds"]
+stream = ExtResource( 5 )
+
+[node name="ship_explosion" type="AudioStreamPlayer" parent="alien_group/events_sounds"]
+stream = ExtResource( 8 )
+
+[node name="ship_shot" type="AudioStreamPlayer" parent="alien_group/events_sounds"]
+stream = ExtResource( 17 )
+
+[node name="shields" type="Node2D" parent="."]
+position = Vector2( 20, 250 )
+
+[node name="shield" parent="shields" instance=ExtResource( 16 )]
+position = Vector2( 70, 0 )
+
+[node name="shield4" parent="shields" instance=ExtResource( 16 )]
+position = Vector2( 102, 0 )
+
+[node name="shield5" parent="shields" instance=ExtResource( 16 )]
+position = Vector2( 134, 0 )
+
+[node name="shield2" parent="shields" instance=ExtResource( 16 )]
+position = Vector2( 38, 0 )
+
+[node name="shield3" parent="shields" instance=ExtResource( 16 )]
+position = Vector2( 6, 0 )
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="score" type="Label" parent="HUD"]
+margin_top = 6.0
+margin_right = 178.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 3 )
+text = "9999"
+align = 2
+
+[node name="life_draw" type="Node2D" parent="HUD"]
+position = Vector2( 3, 0 )
+script = ExtResource( 7 )
+texture = ExtResource( 6 )
+
+[node name="player" parent="." instance=ExtResource( 15 )]
+position = Vector2( 90, 280 )
+
+[node name="debug" type="Label" parent="."]
+margin_top = 301.0
+margin_right = 72.0
+margin_bottom = 318.0
+text = "Debug: on"
+align = 1
+
+[connection signal="timeout" from="alien_group/timer_mother_ship" to="alien_group" method="_on_mother_ship_timeout"]
+[connection signal="timeout" from="alien_group/timer_shot" to="alien_group" method="_on_timer_shot_timeout"]
+[connection signal="timeout" from="alien_group/timer_movement" to="alien_group" method="_on_timer_movement_timeout"]

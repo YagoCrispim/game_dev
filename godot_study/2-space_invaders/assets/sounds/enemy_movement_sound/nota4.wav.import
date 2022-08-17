@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/nota4.wav-0e21fe7c2973437ec22322ceb69c357e.sample"
+
+[deps]
+
+source_file="res://assets/sounds/enemy_movement_sound/nota4.wav"
+dest_files=[ "res://.import/nota4.wav-0e21fe7c2973437ec22322ceb69c357e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
