@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "wRUCPLuuSdnFVBc6fFtB02I5KgaCXWZMTCgeZLvhrDmTgPZOxd32k3LnLgCjC+YmgHvRNKmc+fy3S8Uu4qkqUw==",
+  "success": true,
+  "projectFilePath": "/mnt/FE9499189498D50D/Development/GameDevPractice/4-PS1GameStyle/Basic3D.csproj",
+  "expectedPackageFiles": [
+    "/home/yagoc/.nuget/packages/godot.sourcegenerators/4.2.2/godot.sourcegenerators.4.2.2.nupkg.sha512",
+    "/home/yagoc/.nuget/packages/godotsharp/4.2.2/godotsharp.4.2.2.nupkg.sha512",
+    "/home/yagoc/.nuget/packages/godotsharpeditor/4.2.2/godotsharpeditor.4.2.2.nupkg.sha512",
+    "/home/yagoc/.nuget/packages/microsoft.netcore.app.ref/6.0.32/microsoft.netcore.app.ref.6.0.32.nupkg.sha512",
+    "/home/yagoc/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.32/microsoft.aspnetcore.app.ref.6.0.32.nupkg.sha512"
+  ],
+  "logs": []
+}

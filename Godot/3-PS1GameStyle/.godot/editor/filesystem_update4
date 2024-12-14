@@ -1,2 +1,8 @@
-res://main.tscn
-res://assets/tylesets/tileset.tres
+res://Scenes/AbandonedIndustry.tscn
+res://Assets/Scenario/Tunnel/tylesets/tileset.tres
+res://Assets/Scenario/IndustrialExterior/IndustrialTileSet.tres
+res://Scenes/main.tscn
+res://Characters/Player/Player.cs
+res://Scenes/AbandonedIndustryVillage.tscn
+res://Components/Maps/AbandonedIndustry.tscn
+res://Scenes/NightForest.tscn

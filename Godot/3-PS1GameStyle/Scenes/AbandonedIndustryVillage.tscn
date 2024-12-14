@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://k337s4lxlxif"]
+
+[ext_resource type="PackedScene" uid="uid://bqw1ptia7xux8" path="res://Characters/Player/Player.tscn" id="1_i06yq"]
+[ext_resource type="PackedScene" uid="uid://b2o50n3rkj772" path="res://Components/Maps/AbandonedIndustry.tscn" id="3_miudb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w3b7t"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_ak037"]
+sky_material = SubResource("ProceduralSkyMaterial_w3b7t")
+
+[sub_resource type="Environment" id="Environment_7ys1i"]
+background_mode = 2
+sky = SubResource("Sky_ak037")
+ambient_light_color = Color(0.787876, 0.763443, 0.728621, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.02
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(0.787876, 0.763443, 0.728621, 1)
+fog_light_energy = 0.02
+fog_density = 0.1
+
+[node name="World" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7ys1i")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_i06yq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.99736, 1.55291, 7.14283)
+
+[node name="AbandonedIndustry" parent="." instance=ExtResource("3_miudb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -3)
